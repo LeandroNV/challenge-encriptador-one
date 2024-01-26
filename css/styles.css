@@ -470,8 +470,14 @@ textarea:placeholder-shown {
 	.boton__copiar {
 		padding: 1rem 2rem;
 	}
-	#input {
+	.textarea__container {
+		height: 440px;
+	}
+	textarea {
 		padding: 2rem;
+	}
+	textarea:focus {
+		min-height: 440px;
 	}
 
 	.output__container {
