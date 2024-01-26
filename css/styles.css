@@ -120,6 +120,14 @@ main {
 	justify-content: space-between;
 }
 
+.title__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
 .title {
 	font-size: var(--h1);
 	font-family: Poppins, sans-serif;
@@ -450,11 +458,12 @@ textarea:placeholder-shown {
 
 @media screen and (max-width: 430px) {
 	body {
-		padding: 1rem;
+		padding: 0.5rem;
 	}
 	main {
-		gap: 1rem;
+		gap: 0.5rem;
 	}
+
 	.title {
 		font-size: var(--h2);
 	}
@@ -471,13 +480,13 @@ textarea:placeholder-shown {
 		padding: 1rem 2rem;
 	}
 	.textarea__container {
-		height: 440px;
+		height: 420px;
 	}
 	textarea {
 		padding: 2rem;
 	}
 	textarea:focus {
-		min-height: 440px;
+		min-height: 420px;
 	}
 
 	.output__container {
