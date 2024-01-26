@@ -23,31 +23,34 @@
 	</head>
 	<body>
 		<main>
-			<a
-				href="https://www.linkedin.com/company/alura-latam/"
-				class="Logo__container"
-				target="_blank"
-				><img
-					class="logo"
-					src="/img/logo-dark-fill.png"
-					alt="logo"
-					id="logo"
-			/></a>
+			<div class="Logo__container">
+				<a
+					href="https://www.linkedin.com/company/alura-latam/"
+					target="_blank"
+					><img
+						class="logo"
+						src="/img/logo-dark-fill.png"
+						alt="logo"
+						id="logo"
+				/></a>
+			</div>
 
 			<div class="input__container">
 				<!-- Título -->
 				<h1 class="title" id="title">
 					Encriptador
-					<span class="title-color-effect">Challenge</span>
+					<span class="title-color-effect">CHALLENGE</span>
 					<span class="title-border-effect">ONE</span>
 				</h1>
 				<!-- Caja texto -->
-				<textarea
-					name="input"
-					id="input"
-					placeholder="Escribe tu mensaje aquí..."
-					oninput="limitarTexto()"
-				></textarea>
+				<div class="textarea__container">
+					<textarea
+						name="input"
+						id="input"
+						placeholder="Escribe tu mensaje aquí..."
+						oninput="limitarTexto()"
+					></textarea>
+				</div>
 
 				<div class="seccion__botones" id="botones">
 					<!-- Texto alerta -->
