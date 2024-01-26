@@ -12,53 +12,53 @@ let footerBy = document.getElementById("footer-by");
 
 /*============= ANIMACIONES GSAP ===============*/
 gsap.from("#title", {
-	duration: 1.2,
+	duration: 1.5,
 	opacity: 0,
 	y: -50,
-	ease: "bounce",
+	ease: "bounce.out",
 });
 
 gsap.from("#logo", {
-	duration: 2,
+	duration: 1.5,
 	opacity: 0,
-	x: -50,
+	x: -90,
 	ease: "elastic.out",
 });
 
-gsap.from("#input", {
-	duration: 1,
-	opacity: 0,
-	x: -200,
-	ease: "back.out",
-});
+// gsap.from("#input", {
+// 	duration: 1,
+// 	opacity: 0,
+// 	x: -200,
+// 	ease: "back.out",
+// });
 
-gsap.from("#botones", {
-	duration: 2,
-	opacity: 0,
-	y: 50,
-	ease: "elastic",
-});
+// gsap.from("#botones", {
+// 	duration: 2,
+// 	opacity: 0,
+// 	y: 50,
+// 	ease: "elastic",
+// });
 
 gsap.to(tituloOut, {
-	duration: 2,
+	duration: 1.5,
 	text: "Ningún mensaje fue encontrado.",
 	ease: "none",
 });
 
 gsap.to(parrafoOut, {
-	duration: 2,
+	duration: 1.5,
 	text: "Por favor, ingrese un mensaje para encriptar.",
 	ease: "none",
 });
 
 gsap.to(footerBy, {
-	duration: 2,
+	duration: 1.5,
 	text: "© Code by Leandro Vargas",
 	ease: "none",
 });
 
 gsap.from("#footer-icons", {
-	duration: 2,
+	duration: 1.5,
 	opacity: 0,
 	x: 50,
 	ease: "back.out",
