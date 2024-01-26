@@ -463,6 +463,18 @@ textarea:placeholder-shown {
 	main {
 		gap: 0.5rem;
 	}
+	.input__container {
+		margin-top: 0;
+	}
+
+	.logo__container {
+		display: flex;
+		justify-content: center;
+	}
+
+	.Logo__container a {
+		width: 38px;
+	}
 
 	.title {
 		font-size: var(--h2);
@@ -497,10 +509,6 @@ textarea:placeholder-shown {
 	.figure {
 		position: relative;
 		top: -1.7rem;
-	}
-
-	.logo {
-		width: 40px;
 	}
 }
 /*========================================================*/
