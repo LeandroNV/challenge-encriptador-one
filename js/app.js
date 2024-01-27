@@ -192,7 +192,7 @@ function desencriptar() {
 	btnCopy.style.border = "1px solid #0a3871";
 
 	// Cambiar el texto del botón de copiar
-	btnCopy.textContent = "Copiar";
+	// btnCopy.textContent = "Copiar";
 	// Mostrar alerta
 	funcionAlerta("success", "El texto se ha desencriptado correctamente");
 	// Mostrar el output
