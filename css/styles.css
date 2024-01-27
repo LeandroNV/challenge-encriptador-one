@@ -499,13 +499,13 @@ footer {
 		padding: 1rem 2rem;
 	}
 	.textarea__container {
-		height: 420px;
+		height: 400px;
 	}
 	textarea {
 		padding: 2rem;
 	}
 	textarea:focus {
-		min-height: 420px;
+		min-height: 390px;
 	}
 
 	.output__container {
