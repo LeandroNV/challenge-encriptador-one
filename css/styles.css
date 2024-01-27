@@ -61,6 +61,7 @@ a {
 	text-decoration: none;
 	color: inherit;
 	font-size: inherit;
+	height: min-content;
 }
 
 body {
@@ -355,6 +356,10 @@ textarea:placeholder-shown {
 
 /* Estilos Footer */
 
+footer {
+	height: 10%;
+}
+
 .footer__container {
 	display: flex;
 	flex-direction: column;
@@ -468,11 +473,13 @@ textarea:placeholder-shown {
 	}
 
 	.logo__container {
-		display: flex;
-		justify-content: center;
+		height: auto;
 	}
 
 	.Logo__container a {
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
 		width: 38px;
 	}
 
@@ -511,4 +518,5 @@ textarea:placeholder-shown {
 		top: -1.7rem;
 	}
 }
+
 /*========================================================*/
