@@ -509,13 +509,13 @@ footer {
 	}
 
 	.output__container {
-		height: 470px;
-		position: relative;
+		margin-top: 4rem;
+		height: 540px;
 	}
 
 	.figure {
 		position: relative;
-		top: -1.7rem;
+		top: -3.7rem;
 	}
 }
 
