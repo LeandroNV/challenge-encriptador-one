@@ -1,21 +1,21 @@
 gsap.registerPlugin(TextPlugin);
 
-let outputText = document.getElementById("output");
-let btnCopy = document.getElementById("btnCopy");
-let titleOne = document.getElementById("title");
-let logo = document.getElementById("logo");
-let textInput = document.getElementById("input");
-let botones = document.getElementById("botones");
-let tituloOut = document.getElementById("titulo-output");
-let parrafoOut = document.getElementById("parrafo-output");
-let footerBy = document.getElementById("footer-by");
+const outputText = document.getElementById("output");
+const btnCopy = document.getElementById("btnCopy");
+const titleOne = document.getElementById("title");
+const logo = document.getElementById("logo");
+const textInput = document.getElementById("input");
+const botones = document.getElementById("botones");
+const tituloOut = document.getElementById("titulo-output");
+const parrafoOut = document.getElementById("parrafo-output");
+const footerBy = document.getElementById("footer-by");
 
 /*============= ANIMACIONES GSAP ===============*/
 gsap.from("#title", {
 	duration: 1.5,
 	opacity: 0,
-	y: -50,
-	ease: "bounce.out",
+	x: -50,
+	ease: "elastic.out",
 });
 
 gsap.from("#logo", {
@@ -24,20 +24,6 @@ gsap.from("#logo", {
 	x: -90,
 	ease: "elastic.out",
 });
-
-// gsap.from("#input", {
-// 	duration: 1,
-// 	opacity: 0,
-// 	x: -200,
-// 	ease: "back.out",
-// });
-
-// gsap.from("#botones", {
-// 	duration: 2,
-// 	opacity: 0,
-// 	y: 50,
-// 	ease: "elastic",
-// });
 
 gsap.to(tituloOut, {
 	duration: 1.5,
@@ -69,15 +55,15 @@ gsap.from("#footer-icons", {
 /*============= FUNCIONES ===============*/
 
 function limpiarCaja() {
-	let input = document.getElementById("input");
-	let output = document.getElementById("output");
+	const input = document.getElementById("input");
+	const output = document.getElementById("output");
 
 	input.value = "";
 	output.textContent = "";
 }
 
 function animarTextoEncriptado(resultadoEncriptado) {
-	var outputText = document.getElementById("output");
+	const outputText = document.getElementById("output");
 
 	// Animar el texto encriptado con GSAP
 	gsap.to(outputText, {
@@ -88,17 +74,17 @@ function animarTextoEncriptado(resultadoEncriptado) {
 }
 
 function limitarTexto() {
-	let textarea = document.getElementById("input");
+	const textarea = document.getElementById("input");
 	let contenido = textarea.value;
 
 	// Convertir todo el texto a minúsculas y sin acentos
-	let textoSinAcentos = contenido
+	contenido = contenido
 		.toLowerCase()
 		.normalize("NFD")
 		.replace(/[\u0300-\u036f]/g, "");
 
 	// Permitir solo letras y espacios
-	let textoFiltrado = textoSinAcentos.replace(/[^a-z ]/g, "");
+	const textoFiltrado = contenido.replace(/[^a-z ]/g, "");
 
 	// Actualizar el contenido del textarea
 	textarea.value = textoFiltrado;
@@ -122,30 +108,33 @@ function funcionAlerta(icon, title) {
 	});
 }
 
-function addClass(elemento = String, clase = String) {
-	let elementoHTML = document.getElementById(elemento);
+function addClass(elemento, clase) {
+	const elementoHTML = document.getElementById(elemento);
 	elementoHTML.classList.add(clase);
-	return;
 }
 
-function removeClass(elemento = String, clase = String) {
-	let elementoHTML = document.getElementById(elemento);
+function removeClass(elemento, clase) {
+	const elementoHTML = document.getElementById(elemento);
 	elementoHTML.classList.remove(clase);
-	return;
 }
 
-function asignarTextoElemento(elemento = String, texto = String) {
-	let elementoHTML = document.getElementById(elemento);
+function asignarTextoElemento(elemento, texto) {
+	const elementoHTML = document.getElementById(elemento);
 	elementoHTML.innerHTML = texto;
-	return;
 }
 
 function encriptar() {
-	let input = document.getElementById("input");
-	let output = input.value;
+	const input = document.getElementById("input");
+	const output = input.value;
+
+	//Validar que el texto no esté vacío
+	if (output === "") {
+		funcionAlerta("error", "Por favor, ingrese un mensaje para encriptar.");
+		return;
+	}
 
 	// Reemplazar letras según las reglas
-	let resultadoEncriptado = output
+	const resultadoEncriptado = output
 		.replace(/e/g, "enter")
 		.replace(/i/g, "imes")
 		.replace(/a/g, "ai")
@@ -174,11 +163,17 @@ function encriptar() {
 }
 
 function desencriptar() {
-	let input = document.getElementById("input");
-	let output = input.value;
+	const input = document.getElementById("input");
+	const output = input.value;
+
+	//Validar que el texto no esté vacío
+	if (output === "") {
+		funcionAlerta("error", "Por favor, ingrese un mensaje para encriptar.");
+		return;
+	}
 
 	// Reemplazar letras según las reglas
-	let resultadoDesencriptado = output
+	const resultadoDesencriptado = output
 		.replace(/enter/g, "e")
 		.replace(/imes/g, "i")
 		.replace(/ai/g, "a")
