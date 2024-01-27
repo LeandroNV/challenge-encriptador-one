@@ -153,11 +153,12 @@ function encriptar() {
 	// Cambiar el color de la letra del botón de copiar
 	btnCopy.style.color = "#0a3871";
 	btnCopy.style.border = "1px solid #0a3871";
-
 	// Cambiar el texto del botón de copiar
 	btnCopy.textContent = "Copiar";
 	// Mostrar alerta
 	funcionAlerta("success", "El texto se ha encriptado correctamente");
+	// Mostrar el output
+	removeClass("OutputFin", "remove");
 	// Habilitar el botón de copiar
 	btnCopy.removeAttribute("disabled");
 }
@@ -194,17 +195,21 @@ function desencriptar() {
 	btnCopy.textContent = "Copiar";
 	// Mostrar alerta
 	funcionAlerta("success", "El texto se ha desencriptado correctamente");
+	// Mostrar el output
+	removeClass("OutputFin", "remove");
 	// Habilitar el botón de copiar
 	btnCopy.removeAttribute("disabled");
 }
 
 function copiar() {
 	navigator.clipboard.writeText(outputText.textContent);
-	btnCopy.style.backgroundColor = "#2ecc71";
-	btnCopy.style.color = "#ffffff";
-	btnCopy.style.border = "none";
-	btnCopy.textContent = "Copiado!";
+	// btnCopy.style.backgroundColor = "#2ecc71";
+	// btnCopy.style.color = "#ffffff";
+	// btnCopy.style.border = "none";
+	// btnCopy.textContent = "Copiado!";
 	btnCopy.setAttribute("disabled", true);
 	limpiarCaja();
+	addClass("OutputFin", "remove");
+	removeClass("outputIni", "remove");
 	funcionAlerta("success", "Texto copiado al portapapeles");
 }
