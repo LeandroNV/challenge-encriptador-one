@@ -10,6 +10,13 @@ const tituloOut = document.getElementById("titulo-output");
 const parrafoOut = document.getElementById("parrafo-output");
 const footerBy = document.getElementById("footer-by");
 
+const greeting = ["ONE", "ORACLE", "ALURA"];
+let currentGreetingIndex = 0;
+let currentCharacterIndex = 0;
+let isDeleting = false;
+let isPaused = false;
+let pauseEnd = 0;
+
 /*============= ANIMACIONES GSAP ===============*/
 gsap.from("#title", {
 	duration: 1.5,
@@ -226,3 +233,45 @@ function copiar() {
 	funcionAlerta("success", "Texto copiado al portapapeles");
 	animar("#outputIni", "back.out");
 }
+
+function typeWriterEffect() {
+	const greetingElement = document.getElementById("typing");
+
+	if (isPaused && Date.now() > pauseEnd) {
+		isPaused = false;
+		if (isDeleting) {
+			currentGreetingIndex = (currentGreetingIndex + 1) % greeting.length;
+			isDeleting = false;
+		} else {
+			isDeleting = true;
+		}
+	}
+
+	if (
+		!isPaused &&
+		!isDeleting &&
+		currentCharacterIndex === greeting[currentGreetingIndex].length
+	) {
+		isPaused = true;
+		pauseEnd = Date.now() + 800;
+		return setTimeout(typeWriterEffect, 50);
+	}
+
+	if (!isPaused && isDeleting && currentCharacterIndex === 0) {
+		isPaused = true;
+		pauseEnd = Date.now() + 200;
+		return setTimeout(typeWriterEffect, 50);
+	}
+
+	const timeout = isDeleting ? 100 : 200;
+	greetingElement.innerText = greeting[currentGreetingIndex].substring(
+		0,
+		currentCharacterIndex
+	);
+	currentCharacterIndex = isDeleting
+		? currentCharacterIndex - 1
+		: currentCharacterIndex + 1;
+	setTimeout(typeWriterEffect, timeout);
+}
+
+typeWriterEffect();
