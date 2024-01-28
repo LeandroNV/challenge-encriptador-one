@@ -50,6 +50,15 @@ gsap.from("#footer-icons", {
 	ease: "back.out",
 });
 
+function animar(id = String, ease = String) {
+	gsap.from(id, {
+		duration: 0.5,
+		opacity: 0,
+		x: -90,
+		ease: ease,
+	});
+}
+
 /* =============================================== */
 
 /*============= FUNCIONES ===============*/
@@ -169,7 +178,10 @@ function desencriptar() {
 
 	//Validar que el texto no esté vacío
 	if (output === "") {
-		funcionAlerta("error", "Por favor, ingrese un mensaje para encriptar.");
+		funcionAlerta(
+			"error",
+			"Por favor, ingrese un mensaje para desencriptar."
+		);
 		return;
 	}
 
@@ -212,4 +224,5 @@ function copiar() {
 	addClass("OutputFin", "remove");
 	removeClass("outputIni", "remove");
 	funcionAlerta("success", "Texto copiado al portapapeles");
+	animar("#outputIni", "back.out");
 }
