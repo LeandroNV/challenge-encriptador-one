@@ -269,6 +269,10 @@ textarea:placeholder-shown {
 	gap: 1rem;
 }
 
+button:active {
+	transform: translate(0, 3px);
+}
+
 .boton__encriptar {
 	display: block;
 	padding: 1rem 6rem;
