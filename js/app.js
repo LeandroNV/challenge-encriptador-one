@@ -83,7 +83,7 @@ function animarTextoEncriptado(resultadoEncriptado) {
 
 	// Animar el texto encriptado con GSAP
 	gsap.to(outputText, {
-		duration: 2,
+		duration: 1.2,
 		text: resultadoEncriptado,
 		ease: "none",
 	});
