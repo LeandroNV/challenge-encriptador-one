@@ -75,12 +75,13 @@ body {
 	font-family: "Inter", sans-serif;
 	font-size: 16px;
 	line-height: 1.5;
-	background: rgb(18, 51, 45);
+	/* background: rgb(18, 51, 45);
 	background: radial-gradient(
 		circle,
 		rgba(18, 51, 45, 1) 0%,
 		rgba(3, 21, 19, 1) 100%
-	);
+	); */
+	background: radial-gradient(58.06% 58.06% at 50% 50%, #0e261b 0, #000 100%);
 	color: #d2f9f4;
 }
 
@@ -174,11 +175,13 @@ main {
 }
 
 .title-color-effect {
-	background: linear-gradient(120deg, #79eee5, #2941e4);
+	/* background: linear-gradient(120deg, #79eee5, #2941e4);
 	background-clip: text;
 	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+	-webkit-text-fill-color: transparent; */
 	font-weight: 900;
+	text-shadow: 0 0 10px #0ebeff, 0 0 20px #0ebeff, 0 0 50px #0ebeff,
+		0 0 100px #0ebeff, 0 0 200px #0ebeff;
 	font-style: italic;
 	/* font-family: "Syncopate", sans-serif; */
 	letter-spacing: 0.4;
