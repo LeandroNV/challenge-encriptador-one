@@ -18,12 +18,12 @@ let isPaused = false;
 let pauseEnd = 0;
 
 /*============= ANIMACIONES GSAP ===============*/
-gsap.from("#title", {
-	duration: 1.5,
-	opacity: 0,
-	x: -50,
-	ease: "elastic.out",
-});
+// gsap.from("#title", {
+// 	duration: 1.5,
+// 	opacity: 0,
+// 	x: -50,
+// 	ease: "elastic.out",
+// });
 
 gsap.from("#logo", {
 	duration: 1.5,
