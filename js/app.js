@@ -9,6 +9,7 @@ const botones = document.getElementById("botones");
 const tituloOut = document.getElementById("titulo-output");
 const parrafoOut = document.getElementById("parrafo-output");
 const footerBy = document.getElementById("footer-by");
+const titleColor = document.getElementById("title-color");
 
 const greeting = ["ONE", "ORACLE", "ALURA"];
 let currentGreetingIndex = 0;
@@ -35,6 +36,12 @@ gsap.from("#logo", {
 gsap.to(tituloOut, {
 	duration: 1.5,
 	text: "Ningún mensaje fue encontrado.",
+	ease: "none",
+});
+
+gsap.to(titleColor, {
+	duration: 1.5,
+	text: "ENCRYPTOR",
 	ease: "none",
 });
 
@@ -83,7 +90,7 @@ function animarTextoEncriptado(resultadoEncriptado) {
 
 	// Animar el texto encriptado con GSAP
 	gsap.to(outputText, {
-		duration: 1.2,
+		duration: 1,
 		text: resultadoEncriptado,
 		ease: "none",
 	});
