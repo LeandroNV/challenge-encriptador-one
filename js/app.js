@@ -120,6 +120,8 @@ function funcionAlerta(icon, title) {
 		showConfirmButton: false,
 		timer: 2000,
 		timerProgressBar: true,
+		background: "#0e261b",
+		color: "#fff",
 		didOpen: (toast) => {
 			toast.onmouseenter = Swal.stopTimer;
 			toast.onmouseleave = Swal.resumeTimer;
