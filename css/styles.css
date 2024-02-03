@@ -20,11 +20,15 @@
 	--border05: 0.5rem;
 }
 
-/* Personalizar Scroll-bar */
+/* Personalizar Scroll-bar`& Selección */
 ::-webkit-scrollbar {
 	width: 8px;
 	height: 3px;
 	background-color: #14312b;
+}
+::selection {
+	background-color: #79eee5;
+	color: #031513;
 }
 /*=========================================================*/
 
@@ -83,6 +87,7 @@ body {
 	); */
 	background: radial-gradient(58.06% 58.06% at 50% 50%, #0e261b 0, #000 100%);
 	color: #d2f9f4;
+	user-select: none;
 }
 
 main {
@@ -227,7 +232,7 @@ textarea {
 }
 
 textarea::placeholder {
-	color: #79eee5;
+	color: #d2f9f4;
 	font-weight: 300;
 }
 
