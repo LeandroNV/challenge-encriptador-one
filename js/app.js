@@ -203,11 +203,11 @@ function desencriptar() {
 
 	// Reemplazar letras según las reglas
 	const resultadoDesencriptado = output
-		.replace(/enter/g, "e")
-		.replace(/imes/g, "i")
-		.replace(/ai/g, "a")
+		.replace(/ufat/g, "u")
 		.replace(/ober/g, "o")
-		.replace(/ufat/g, "u");
+		.replace(/ai/g, "a")
+		.replace(/imes/g, "i")
+		.replace(/enter/g, "e");
 
 	//Agregar clase para mostrar el texto desencriptado
 	addClass("outputIni", "remove");
