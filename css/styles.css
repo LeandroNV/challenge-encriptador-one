@@ -216,28 +216,7 @@ main {
 	-webkit-text-stroke-width: 1px;
 	-webkit-text-stroke-color: #d2f9f4;
 	color: transparent;
-	font-weight: 800;
-	/* color: white;
-	font-family: "Open Sans", sans-serif;
-	font-weight: 700;
-	font-size: 3vw; */
-}
-
-#typing::after {
-	content: "|";
-	position: relative;
-	right: 0;
-	animation: blink 1s step-end infinite;
-}
-
-@keyframes blink {
-	from,
-	to {
-		color: transparent;
-	}
-	50% {
-		color: #d2f9f4;
-	}
+	font-weight: 900;
 }
 
 /* ---------------- */
@@ -440,7 +419,7 @@ button:active {
 
 .figure {
 	filter: drop-shadow(10px 20px 30px black);
-	clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+	/* clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%); */
 }
 
 .texto__output {
