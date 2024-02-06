@@ -97,13 +97,13 @@ gsap.to(".loader-2", {
 
 /*============= ANIMACIONES GSAP ===============*/
 
-// gsap.from(".site-content", {
-// 	y: 200,
-// 	ease: "power4.inOut",
-// 	duration: 1.5,
-// 	delay: 4.2,
-// 	stagger: 0.05,
-// });
+gsap.from(".site-content", {
+	y: 200,
+	ease: "power4.inOut",
+	duration: 1.5,
+	delay: 4.2,
+	stagger: 0.05,
+});
 
 gsap.to(tituloOut, {
 	duration: 1.5,
