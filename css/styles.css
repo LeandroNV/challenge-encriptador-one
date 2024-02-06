@@ -1,640 +1,321 @@
-/* Importamos las fuentes */
-
-@import url("https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
-
-/*======================= Variables  ======================*/
-
-:root {
-	--font-scale: 1.333;
-	--p: 1rem;
-	--h5: calc(var(--p) * var(--font-scale));
-	--h4: calc(var(--h5) * var(--font-scale));
-	--h3: calc(var(--h4) * var(--font-scale));
-	--h2: calc(var(--h3) * var(--font-scale));
-	--h1: calc(var(--h2) * var(--font-scale));
-	--small: calc(var(--p) / var(--font-scale));
-	--margin-lg: 0 12%;
-	--margin-md: 0 6%;
-	--border1: 1rem;
-	--border05: 0.5rem;
-}
-
-/* Personalizar Scroll-bar`& Selección */
-::-webkit-scrollbar {
-	width: 8px;
-	height: 3px;
-	background-color: #14312b;
-}
-::selection {
-	background-color: #79eee5;
-	color: #031513;
-}
-/*=========================================================*/
-
-/*======================= RESET CSS  ======================*/
-
-/* Reseteamos los margin y paddings de todas las etiquetas */
-* {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	vertical-align: baseline;
-}
-
-/* Evitamos problemas con las imagenes */
-img,
-picture,
-video,
-iframe,
-figure {
-	max-width: 100%;
-	width: 100%;
-	display: block;
-	/* opcional */
-	-o-object-fit: cover;
-	object-fit: cover;
-	/* opcional */
-	-o-object-position: center center;
-	object-position: center center;
-}
-
-/* Reseteamos los enlaces para funcionar como cajas... */
-a {
-	display: block;
-	text-decoration: none;
-	color: inherit;
-	font-size: inherit;
-	height: min-content;
-}
-
-body {
-	height: 100vh;
-	width: 100vw;
-	user-select: none;
-	background: radial-gradient(58.06% 58.06% at 50% 50%, #0e261b 0, #000 100%);
-}
-
-.site-content {
-	height: 100vh;
-	width: 100vw;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	font-family: "Inter", sans-serif;
-	font-size: 16px;
-	line-height: 1.5;
-	color: #d2f9f4;
-	position: relative;
-	z-index: -2;
-	padding: 20px;
-}
-
-main {
-	display: grid;
-	grid-template-columns: 10% 60% 30%;
-	gap: 2rem;
-	width: 100%;
-	max-width: 1200px;
-	margin: 0 auto;
-	height: 90%;
-}
-
-/* Estilos Loader */
-
-.pre-loader {
-	position: fixed;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-}
-
-.loader {
-	position: absolute;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background: url(../img/loader-bg.jpg) no-repeat 50% 50%;
-	background-size: cover;
-	color: #fff;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.loader-content {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	display: flex;
-	width: 400px;
-	z-index: 2;
-	color: #fff;
-}
-
-.count {
-	flex: 2;
-	text-align: right;
-	line-height: 1;
-	padding: 0 1em;
-}
-
-.copy {
-	flex: 6;
-	font-family: "PP Editorial Old";
-	font-size: 30px;
-	text-transform: uppercase;
-	line-height: 1;
-}
-
-.ml16 {
-	overflow: hidden;
-}
-
-.ml16 .letter {
-	display: inline-block;
-	line-height: 1em;
-}
-
-.loader-bg {
-	position: absolute;
-	display: block;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background: #79eee5;
-	z-index: -1;
-}
-
-.loader-2 {
-	position: absolute;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background: url(../img/bg-loader03.jpg) no-repeat 50% 50%;
-	background-size: cover;
-	background-position: center;
-	z-index: -1;
-	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-}
-
-/*======================================================================*/
-
-/*======================= ESTILOS ÁREA DEL INPUT  ======================*/
-
-.logo__container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.logo {
-	width: 60px;
-}
-
-/* Estilos Área del Input */
-
-.input__container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-between;
-}
-
-/* Animar el título */
-
-.typing {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: auto;
-	font-style: italic;
-	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: #d2f9f4;
-	color: transparent;
-	font-weight: 900;
-}
-
-/* ---------------- */
-
-.title__container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-}
-
-.title {
-	font-size: var(--h1);
-	font-weight: 800;
-	letter-spacing: 0.4;
-	max-width: 100%;
-	text-align: center;
-	margin: 0;
-	line-height: 1.1;
-}
-
-.title-color-effect {
-	background: linear-gradient(120deg, #79eee5, #2941e4);
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	font-weight: 900;
-	/* text-shadow: 0 0 10px #0ebeff, 0 0 20px #0ebeff, 0 0 50px #0ebeff,
-		0 0 100px #0ebeff, 0 0 200px #0ebeff; */
-	font-style: italic;
-	/* font-family: "Syncopate", sans-serif; */
-	letter-spacing: 0.4;
-}
-
-.title-border-effect {
-	font-style: italic;
-	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: #d2f9f4;
-	color: transparent;
-	font-weight: 800;
-}
-
-.textarea__container {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	height: 28rem;
-}
-
-textarea {
-	-webkit-tap-highlight-color: transparent;
-	width: 100%;
-	min-height: 15rem;
-	padding: 2rem 3.5rem;
-	font-size: 1.5rem;
-	line-height: 2rem;
-	font-weight: 500;
-	background-color: hsl(147, 58%, 75%, 5%);
-	border: none;
-	border-radius: 1rem;
-	outline: none;
-	box-shadow: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.075),
-		0 0 0 1px hsla(0, 0%, 0%, 0.05), 0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
-		0 0.9px 1.5px hsla(0, 0%, 0%, 0.045), 0 3.5px 6px hsla(0, 0%, 0%, 0.09);
-	transition: all ease 0.2s;
-	cursor: pointer;
-	resize: none;
-	color: #d2f9f4;
-	/* margin-top: 5rem; */
-}
-
-textarea::placeholder {
-	color: #d2f9f4;
-	font-weight: 300;
-}
-
-textarea:focus {
-	min-height: 28rem;
-	/* box-shadow: inset 18px 18px 30px #d1d9e9, inset -18px -18px 30px #ffffff; */
-	box-shadow: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.075),
-		0 0 0 1px hsla(0, 0%, 0%, 0.05), 0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
-		0 0.9px 1.5px hsla(0, 0%, 0%, 0.045), 0 3.5px 6px hsla(0, 0%, 0%, 0.09);
-}
-
-textarea:placeholder-shown {
-	background: hsl(147, 58%, 75%, 5%);
-}
-
-.seccion__botones {
-	display: flex;
-	flex-direction: column;
-	gap: 1rem;
-}
-
-.texto__info {
-	display: flex;
-	align-items: center;
-	gap: 5px;
-	font-weight: 400;
-	color: #d2f9f4;
-}
-
-.texto__info p {
-	font-size: 15px;
-}
-
-.texto__info i {
-	font-size: 18px;
-}
-
-.botones__container {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	gap: 1rem;
-}
-
-button:active {
-	transform: translate(0, 3px);
-}
-
-.boton__encriptar {
-	display: block;
-	padding: 1rem 6rem;
-	border-radius: 10px;
-	border: none;
-	background-color: #79eee5;
-	color: #031513;
-	font-weight: 600;
-	cursor: pointer;
-	transition: all ease 0.2s;
-	text-wrap: pretty;
-}
-
-.boton__encriptar:hover {
-	/* transform: translate(0, -3px); */
-	box-shadow: 0 20px 80px -10px #79eee5;
-}
-
-.boton__desencriptar {
-	display: block;
-	padding: 1rem 6rem;
-	border-radius: 10px;
-	border: none;
-	background-color: #031513;
-	border: 1px solid #d2f9f4;
-	color: #d2f9f4;
-	font-weight: 600;
-	cursor: pointer;
-	transition: all ease 0.2s;
-}
-
-.boton__desencriptar:hover {
-	/* transform: translate(0, -3px); */
-	background-color: #d2f9f4;
-	color: #031513;
-}
-
-.boton__copiar {
-	display: block;
-	padding: 1rem 6rem;
-	border-radius: 10px;
-	background-color: #ffffff;
-	color: #0a3871;
-	font-weight: 600;
-	cursor: pointer;
-	transition: all ease 0.2s;
-	border: 1px solid #0a3871;
-}
-
-.boton__copiar:hover {
-	background-color: #1a4b87;
-}
-
-/*==========================================================================*/
-
-/*===================== Estilos Área del Output ============================*/
-
-.output__container {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	/* background: linear-gradient(
-		90deg,
-		rgba(2, 6, 18, 1) 0%,
-		rgba(22, 30, 42, 1) 35%,
-		rgba(32, 45, 54, 1) 100%
-	); */
-	background: hsl(175, 77%, 70%, 5%);
-	border-radius: 20px;
-	box-shadow: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.075),
-		/* shadow ring 👇 */ 0 0 0 1px hsla(0, 0%, 0%, 0.05),
-		/* multiple soft shadows 👇 */ 0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
-		0 0.9px 1.5px hsla(0, 0%, 0%, 0.045), 0 3.5px 6px hsla(0, 0%, 0%, 0.09);
-	padding: 2rem;
-}
-
-.figure {
-	filter: drop-shadow(10px 20px 30px black);
-	/* clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%); */
-}
-
-.texto__output {
-	margin: 1rem 0;
-	display: flex;
-	flex-direction: column;
-	gap: 1rem;
-	text-align: center;
-	color: #d2f9f4;
-}
-
-.texto__output-titulo {
-	font-weight: bold;
-	color: #d2f9f4;
-	font-size: 2rem;
-	text-wrap: pretty;
-	line-height: 1.1;
-}
-.texo__output-parrafo {
-	font-weight: 500;
-	font-size: 15px;
-	color: #d2f9f4;
-	text-wrap: pretty;
-}
-
-.output__text {
-	font-size: 20px;
-	font-weight: 600;
-	text-wrap: pretty;
-	font-weight: 400;
-}
-
-.output__final {
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-	justify-content: space-between;
-}
-
-.remove {
-	display: none;
-}
-
-/* Estilos Footer */
-
-footer {
-	height: 10%;
-	display: flex;
-	align-items: end;
-	justify-content: center;
-}
-
-.footer__container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
-
-.footer__container p {
-	font-size: 15px;
-	font-weight: 600;
-	color: #d2f9f4;
-}
-
-.footer__container a {
-	color: #d2f9f4;
-	transition: all ease 0.2s;
-}
-
-.footer__container a:hover {
-	/* transform: translate(0, -3px); */
-	box-shadow: 0 20px 80px -10px #79eee5;
-}
-
-.icons-footer {
-	display: flex;
-	align-items: center;
-	gap: 8px;
-}
-
-.icons-footer a {
-	cursor: pointer;
-}
-.icons-footer a i {
-	font-size: 20px;
-	color: #d2f9f4;
-	transition: all ease 0.2s;
-}
-.icons-footer a i:hover {
-	color: #79eee5;
-}
-
-/*===============================================================*/
-
-/*======================= MEDIA QUERIES  ======================*/
-
-@media screen and (max-width: 1200px) {
-	main {
-		/* grid-template-columns: 10% 50% 40%; */
-		padding: 1rem;
-		height: 80%;
-	}
-}
-
-@media screen and (max-width: 1024px) {
-	.site-content {
-		padding: 1rem;
-		height: auto;
+gsap.registerPlugin(TextPlugin);
+
+const outputText = document.getElementById("output");
+const btnCopy = document.getElementById("btnCopy");
+const titleOne = document.getElementById("title");
+const logo = document.getElementById("logo");
+const textInput = document.getElementById("input");
+const botones = document.getElementById("botones");
+const tituloOut = document.getElementById("titulo-output");
+const parrafoOut = document.getElementById("parrafo-output");
+const footerBy = document.getElementById("footer-by");
+const titleColor = document.getElementById("title-color");
+
+function startLoader() {
+	let counterElement = document.querySelector(".count p");
+	let currentValue = 0;
+
+	function updateCounter() {
+		if (currentValue < 100) {
+			let increment = Math.floor(Math.random() * 10) + 1;
+			currentValue = Math.min(currentValue + increment, 100);
+			counterElement.textContent = currentValue;
+
+			let delay = Math.floor(Math.random() * 200) + 25;
+			setTimeout(updateCounter, delay);
+		}
 	}
 
-	main {
-		grid-template-columns: 1fr;
-		padding: 1rem;
-		height: 80%;
-	}
-	.seccion__botones {
-		margin-top: 2rem;
-	}
-	#input {
-		margin-top: 2rem;
-	}
+	updateCounter();
 }
 
-@media screen and (max-width: 768px) {
-	main {
-		grid-template-columns: 1fr;
-		padding: 0 1rem;
-		height: 80%;
-		gap: 0;
-	}
+startLoader(); // Iniciar el loader
 
-	.loader-2 {
-		background-position: left;
-	}
+gsap.to(".count", { opacity: 0, delay: 3.5, duration: 0.25 });
 
-	.seccion__botones {
-		margin-top: 2rem;
-	}
-	.output__container {
-		margin-top: 2rem;
-	}
-	.input__container {
-		margin-top: 2rem;
-	}
-	.boton__encriptar {
-		padding: 1rem 3rem;
-	}
-	.boton__desencriptar {
-		padding: 1rem 3rem;
-	}
-	.boton__copiar {
-		padding: 1rem 3rem;
-	}
+let textWrapper = document.querySelector(".ml16");
+textWrapper.innerHTML = textWrapper.textContent.replace(
+	/\S/g,
+	"<span class='letter'>$&</span>"
+);
+
+anime
+	.timeline({ loop: false })
+	.add({
+		targets: ".ml16 .letter",
+		translateY: [-100, 0],
+		easing: "easeOutExpo",
+		duration: 1500,
+		delay: (el, i) => 30 * i,
+	})
+	.add({
+		targets: ".ml16 .letter",
+		translateY: [0, 100],
+		easing: "easeOutExpo",
+		duration: 3000,
+		delay: (el, i) => 2000 + 30 * i,
+	});
+
+gsap.to(".count", {
+	opacity: 0,
+	ease: "power2.inOut",
+	duration: 0.5,
+	delay: 3.75,
+});
+
+gsap.to(".pre-loader", {
+	scale: 0.5,
+	ease: "power4.inOut",
+	duration: 2,
+	delay: 3,
+});
+
+gsap.to(".loader", {
+	height: "0",
+	ease: "power4.inOut",
+	duration: 1.5,
+	delay: 3.75,
+});
+
+gsap.to(".loader-bg", {
+	height: "0",
+	ease: "power4.inOut",
+	duration: 1.5,
+	delay: 4.2,
+	onComplete: function () {
+		// Cambiar el z-index de .site-content para que esté por encima del loader
+		document.querySelector(".site-content").style.zIndex = "1";
+	},
+});
+
+gsap.to(".loader-2", {
+	clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+	ease: "power4.inOut",
+	duration: 1.5,
+	delay: 4.5,
+});
+
+/*============= ANIMACIONES GSAP ===============*/
+
+// gsap.from(".site-content", {
+// 	y: 200,
+// 	ease: "power4.inOut",
+// 	duration: 1.5,
+// 	delay: 4.5,
+// 	stagger: 0.05,
+// });
+
+// gsap.to(tituloOut, {
+// 	duration: 1.5,
+// 	text: "Ningún mensaje fue encontrado.",
+// 	ease: "none",
+// 	delay: 4.5,
+// });
+
+// gsap.to(titleColor, {
+// 	duration: 1.5,
+// 	text: "ENCRYPTOR",
+// 	ease: "none",
+// 	delay: 4.5,
+// });
+
+// gsap.to(parrafoOut, {
+// 	duration: 1.5,
+// 	text: "Por favor, ingrese un mensaje para encriptar.",
+// 	ease: "none",
+// 	delay: 4.5,
+// });
+
+gsap.to(footerBy, {
+	duration: 1.5,
+	text: "© Code by Leandro Vargas",
+	ease: "none",
+	delay: 4.5,
+});
+
+// gsap.from("#footer-icons", {
+// 	duration: 1.5,
+// 	opacity: 0,
+// 	x: 50,
+// 	ease: "back.out",
+// 	delay: 4.5,
+// });
+
+// gsap.to("#logo", {
+// 	clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+// 	ease: "power4.inOut",
+// 	duration: 1.5,
+// 	delay: 4.4,
+// 	stagger: 0.25,
+// });
+
+function animar(id = String, ease = String) {
+	gsap.from(id, {
+		duration: 0.5,
+		opacity: 0,
+		x: -90,
+		ease: ease,
+	});
 }
 
-@media screen and (max-width: 430px) {
-	.loader-2 {
-		background-position: left;
-	}
-	.site-content {
-		padding: 0.5rem;
-	}
-	main {
-		gap: 0.5rem;
-	}
-	.input__container {
-		margin-top: 0;
-	}
+/* =============================================== */
 
-	.logo__container {
-		height: auto;
-	}
+/*============= FUNCIONES ===============*/
 
-	.Logo__container a {
-		display: flex;
-		flex-direction: column;
-		justify-content: start;
-		width: 38px;
-	}
+function limpiarCaja() {
+	const input = document.getElementById("input");
+	const output = document.getElementById("output");
 
-	.title {
-		font-size: var(--h2);
-	}
-	.texto__info {
-		display: none;
-	}
-	.boton__encriptar {
-		padding: 1rem 2rem;
-	}
-	.boton__desencriptar {
-		padding: 1rem 2rem;
-	}
-	.boton__copiar {
-		padding: 1rem 2rem;
-	}
-	.textarea__container {
-		height: 400px;
-	}
-	textarea {
-		padding: 2rem;
-	}
-	textarea:focus {
-		min-height: 390px;
-	}
-
-	.output__container {
-		margin-top: 4rem;
-		height: 540px;
-	}
-
-	.figure {
-		position: relative;
-		top: -3.7rem;
-	}
+	input.value = "";
+	output.textContent = "";
 }
 
-/*========================================================*/
+function animarTextoEncriptado(resultadoEncriptado) {
+	const outputText = document.getElementById("output");
+
+	// Animar el texto encriptado con GSAP
+	gsap.to(outputText, {
+		duration: 1,
+		text: resultadoEncriptado,
+		ease: "none",
+	});
+}
+
+function limitarTexto() {
+	const textarea = document.getElementById("input");
+	let contenido = textarea.value;
+
+	// Convertir todo el texto a minúsculas y sin acentos
+	contenido = contenido
+		.toLowerCase()
+		.normalize("NFD")
+		.replace(/[\u0300-\u036f]/g, "");
+
+	// Permitir solo letras y espacios
+	const textoFiltrado = contenido.replace(/[^a-z ]/g, "");
+
+	// Actualizar el contenido del textarea
+	textarea.value = textoFiltrado;
+}
+
+function funcionAlerta(icon, title) {
+	const Toast = Swal.mixin({
+		toast: true,
+		position: "top-start",
+		showConfirmButton: false,
+		timer: 2000,
+		timerProgressBar: true,
+		background: "#0e261b",
+		color: "#fff",
+		didOpen: (toast) => {
+			toast.onmouseenter = Swal.stopTimer;
+			toast.onmouseleave = Swal.resumeTimer;
+		},
+	});
+	Toast.fire({
+		icon: icon,
+		title: title,
+	});
+}
+
+function addClass(elemento, clase) {
+	const elementoHTML = document.getElementById(elemento);
+	elementoHTML.classList.add(clase);
+}
+
+function removeClass(elemento, clase) {
+	const elementoHTML = document.getElementById(elemento);
+	elementoHTML.classList.remove(clase);
+}
+
+function asignarTextoElemento(elemento, texto) {
+	const elementoHTML = document.getElementById(elemento);
+	elementoHTML.innerHTML = texto;
+}
+
+function encriptar() {
+	const input = document.getElementById("input");
+	const output = input.value;
+
+	//Validar que el texto no esté vacío
+	if (output === "") {
+		funcionAlerta("error", "Por favor, ingrese un mensaje para encriptar.");
+		return;
+	}
+
+	// Reemplazar letras según las reglas
+	const resultadoEncriptado = output
+		.replace(/e/g, "enter")
+		.replace(/i/g, "imes")
+		.replace(/a/g, "ai")
+		.replace(/o/g, "ober")
+		.replace(/u/g, "ufat");
+
+	// Agregar clase para mostrar el texto encriptado
+	addClass("outputIni", "remove");
+	// Remover clase para mostrar el botón de copiar
+	removeClass("btnCopy", "remove");
+
+	// Animar el texto encriptado con GSAP
+	animarTextoEncriptado(resultadoEncriptado);
+	// Cambiar el color del botón de copiar
+	btnCopy.style.backgroundColor = "#ffffff";
+	// Cambiar el color de la letra del botón de copiar
+	btnCopy.style.color = "#0a3871";
+	btnCopy.style.border = "1px solid #0a3871";
+	// Cambiar el texto del botón de copiar
+	btnCopy.textContent = "Copiar";
+	// Mostrar alerta
+	funcionAlerta("success", "El texto se ha encriptado correctamente");
+	// Mostrar el output
+	removeClass("OutputFin", "remove");
+	// Habilitar el botón de copiar
+	btnCopy.removeAttribute("disabled");
+}
+
+function desencriptar() {
+	const input = document.getElementById("input");
+	const output = input.value;
+
+	//Validar que el texto no esté vacío
+	if (output === "") {
+		funcionAlerta(
+			"error",
+			"Por favor, ingrese un mensaje para desencriptar."
+		);
+		return;
+	}
+
+	// Reemplazar letras según las reglas
+	const resultadoDesencriptado = output
+		.replace(/enter/g, "e")
+		.replace(/imes/g, "i")
+		.replace(/ai/g, "a")
+		.replace(/ober/g, "o")
+		.replace(/ufat/g, "u");
+
+	//Agregar clase para mostrar el texto desencriptado
+	addClass("outputIni", "remove");
+	// Mostrar el texto encriptado
+	animarTextoEncriptado(resultadoDesencriptado);
+	// Cambiar el color del botón de copiar
+	btnCopy.style.backgroundColor = "#ffffff";
+	// Cambiar el color de la letra del botón de copiar
+	btnCopy.style.color = "#0a3871";
+	btnCopy.style.border = "1px solid #0a3871";
+	funcionAlerta("success", "El texto se ha desencriptado correctamente");
+	// Mostrar el output
+	removeClass("OutputFin", "remove");
+	// Habilitar el botón de copiar
+	btnCopy.removeAttribute("disabled");
+}
+
+function copiar() {
+	navigator.clipboard.writeText(outputText.textContent);
+	btnCopy.setAttribute("disabled", true);
+	limpiarCaja();
+	addClass("OutputFin", "remove");
+	removeClass("outputIni", "remove");
+	funcionAlerta("success", "Texto copiado al portapapeles");
+	animar("#outputIni", "back.out");
+}
