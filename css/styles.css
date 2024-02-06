@@ -73,21 +73,23 @@ a {
 body {
 	height: 100vh;
 	width: 100vw;
+	user-select: none;
+	background: radial-gradient(58.06% 58.06% at 50% 50%, #0e261b 0, #000 100%);
+}
+
+.site-content {
+	height: 100vh;
+	width: 100vw;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	font-family: "Inter", sans-serif;
 	font-size: 16px;
 	line-height: 1.5;
-	/* background: rgb(18, 51, 45);
-	background: radial-gradient(
-		circle,
-		rgba(18, 51, 45, 1) 0%,
-		rgba(3, 21, 19, 1) 100%
-	); */
-	background: radial-gradient(58.06% 58.06% at 50% 50%, #0e261b 0, #000 100%);
 	color: #d2f9f4;
-	user-select: none;
+	position: relative;
+	z-index: -2;
+	padding: 20px;
 }
 
 main {
@@ -97,8 +99,87 @@ main {
 	width: 100%;
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 20px;
 	height: 90%;
+}
+
+/* Estilos Loader */
+
+.pre-loader {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.loader {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../img/loader-bg.jpg) no-repeat 50% 50%;
+	background-size: cover;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.loader-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	width: 400px;
+	z-index: 2;
+	color: #fff;
+}
+
+.count {
+	flex: 2;
+	text-align: right;
+	line-height: 1;
+	padding: 0 1em;
+}
+
+.copy {
+	flex: 6;
+	font-family: "PP Editorial Old";
+	font-size: 30px;
+	text-transform: uppercase;
+	line-height: 1;
+}
+
+.ml16 {
+	overflow: hidden;
+}
+
+.ml16 .letter {
+	display: inline-block;
+	line-height: 1em;
+}
+
+.loader-bg {
+	position: absolute;
+	display: block;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: #79eee5;
+	z-index: -1;
+}
+
+.loader-2 {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../img/bg-loader03.png) no-repeat 50% 50%;
+	background-size: cover;
+	background-position: center;
+	z-index: -1;
+	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 /*======================================================================*/
@@ -359,6 +440,7 @@ button:active {
 
 .figure {
 	filter: drop-shadow(10px 20px 30px black);
+	clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
 }
 
 .texto__output {
@@ -406,6 +488,9 @@ button:active {
 
 footer {
 	height: 10%;
+	display: flex;
+	align-items: end;
+	justify-content: center;
 }
 
 .footer__container {
@@ -413,7 +498,6 @@ footer {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	padding: 1rem 0;
 }
 
 .footer__container p {
@@ -463,7 +547,7 @@ footer {
 }
 
 @media screen and (max-width: 1024px) {
-	body {
+	.site-content {
 		padding: 1rem;
 		height: auto;
 	}
@@ -489,6 +573,10 @@ footer {
 		gap: 0;
 	}
 
+	.loader-2 {
+		background-position: left;
+	}
+
 	.seccion__botones {
 		margin-top: 2rem;
 	}
@@ -510,7 +598,10 @@ footer {
 }
 
 @media screen and (max-width: 430px) {
-	body {
+	.loader-2 {
+		background-position: left;
+	}
+	.site-content {
 		padding: 0.5rem;
 	}
 	main {
