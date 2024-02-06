@@ -11,23 +11,6 @@ const parrafoOut = document.getElementById("parrafo-output");
 const footerBy = document.getElementById("footer-by");
 const titleColor = document.getElementById("title-color");
 
-const greeting = ["ONE", "ORACLE", "ALURA"];
-let currentGreetingIndex = 0;
-let currentCharacterIndex = 0;
-let isDeleting = false;
-let isPaused = false;
-let pauseEnd = 0;
-
-/* ============ ANIMACIÓN LOADER =============== */
-// function removeLoaderAfterDelay(delayTime) {
-// 	setTimeout(() => {
-// 		const loaderElement = document.querySelector(".loader-container");
-// 		if (loaderElement) {
-// 			loaderElement.remove(); // Elimina el loader del DOM
-// 		}
-// 	}, delayTime);
-// }
-
 function startLoader() {
 	let counterElement = document.querySelector(".count p");
 	let currentValue = 0;
@@ -47,9 +30,6 @@ function startLoader() {
 }
 
 startLoader(); // Iniciar el loader
-
-// Llamar a la función removeLoaderAfterDelay() para eliminar el loader después de un tiempo específico
-// removeLoaderAfterDelay(7000);
 
 gsap.to(".count", { opacity: 0, delay: 3.5, duration: 0.25 });
 
@@ -117,13 +97,13 @@ gsap.to(".loader-2", {
 
 /*============= ANIMACIONES GSAP ===============*/
 
-gsap.from(".site-content", {
-	y: 200,
-	ease: "power4.inOut",
-	duration: 1.5,
-	delay: 4.2,
-	stagger: 0.05,
-});
+// gsap.from(".site-content", {
+// 	y: 200,
+// 	ease: "power4.inOut",
+// 	duration: 1.5,
+// 	delay: 4.2,
+// 	stagger: 0.05,
+// });
 
 gsap.to(tituloOut, {
 	duration: 1.5,
@@ -132,12 +112,12 @@ gsap.to(tituloOut, {
 	delay: 4.5,
 });
 
-gsap.to(titleColor, {
-	duration: 1.5,
-	text: "ENCRYPTOR",
-	ease: "none",
-	delay: 4.5,
-});
+// gsap.to(titleColor, {
+// 	duration: 1.5,
+// 	text: "ENCRYPTOR",
+// 	ease: "none",
+// 	delay: 4.5,
+// });
 
 gsap.to(parrafoOut, {
 	duration: 1.5,
@@ -153,27 +133,19 @@ gsap.to(footerBy, {
 	delay: 4.5,
 });
 
-gsap.from("#footer-icons", {
-	duration: 1.5,
-	opacity: 0,
-	x: 50,
-	ease: "back.out",
-	delay: 4.5,
-});
+// gsap.from("#footer-icons", {
+// 	duration: 1.5,
+// 	opacity: 0,
+// 	x: 50,
+// 	ease: "back.out",
+// 	delay: 4.5,
+// });
 
-gsap.to("#logo", {
-	clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-	ease: "power4.inOut",
-	duration: 1.5,
-	delay: 4.4,
-	stagger: 0.25,
-});
-
-// gsap.to(".figure", {
+// gsap.to("#logo", {
 // 	clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
 // 	ease: "power4.inOut",
 // 	duration: 1.5,
-// 	delay: 4.5,
+// 	delay: 4.4,
 // 	stagger: 0.25,
 // });
 
