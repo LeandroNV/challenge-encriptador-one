@@ -6,10 +6,8 @@
 		<title>Challenge ONE</title>
 		<link rel="icon" href="/img/figure2-rg.png" />
 		<!-- Sweetalert CSS -->
-		<link
-			href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.4/dist/sweetalert2.min.css"
-			rel="stylesheet"
-		/>
+		<link rel="stylesheet" href="@sweetalert2/theme-dark/dark.css" />
+
 		<!-- BOXICONS -->
 		<link
 			href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -22,118 +20,145 @@
 		<link rel="stylesheet" href="/css/styles.css" />
 	</head>
 	<body>
-		<main>
-			<div
-				class="Logo__container"
-				style="display: flex; justify-content: center"
-			>
-				<a
-					href="https://www.linkedin.com/company/alura-latam/"
-					target="_blank"
-					><img
-						class="logo"
-						src="/img/logo-dark-fill.png"
-						alt="logo"
-						id="logo"
-				/></a>
+		<!-- Loader -->
+		<div class="loader-container">
+			<div class="pre-loader">
+				<div class="loader"></div>
+				<div class="loader-bg"></div>
 			</div>
-
-			<div class="input__container">
-				<!-- Título -->
-				<div class="title__container">
-					<h1 class="title" id="title">
-						<span class="title-color-effect" id="title-color"
-							>0X9B2C1F5</span
-						>
-						<span class="typing" id="typing"></span>
-					</h1>
-					<!-- <h1 class="typing" id="typing"></h1> -->
-				</div>
-
-				<!-- Caja texto -->
-				<div class="textarea__container">
-					<textarea
-						name="input"
-						id="input"
-						placeholder="Escribe tu mensaje aquí..."
-						oninput="limitarTexto()"
-					></textarea>
-				</div>
-
-				<div class="seccion__botones" id="botones">
-					<!-- Texto alerta -->
-					<div class="texto__info">
-						<i class="bx bxs-alarm-exclamation"></i>
-						<p>Sólo letras minúsculas y sin acentos.</p>
-					</div>
-					<!-- Botones -->
-					<div class="botones__container">
-						<button class="boton__encriptar" onclick="encriptar()">
-							Encriptar
-						</button>
-						<button
-							class="boton__desencriptar"
-							onclick="desencriptar()"
-						>
-							Desencriptar
-						</button>
-					</div>
+			<div class="loader-content">
+				<div class="count"><p>0</p></div>
+				<div class="copy">
+					<p class="ml16">Challenge</p>
 				</div>
 			</div>
+			<div class="loader-2"></div>
+		</div>
 
-			<!-- Texto Salida -->
-			<div class="output__container">
-				<div class="output__inicial" id="outputIni">
-					<!-- Avatar Img -->
-					<img
-						class="figure"
-						src="/img/neon-04-rb.png"
-						alt="avatar"
-					/>
-					<!-- Texto Container -->
-					<div class="texto__output">
-						<p class="texto__output-titulo" id="titulo-output">
-							xxxxx xxxxx xxx xxxx
-						</p>
-						<p class="texo__output-parrafo" id="parrafo-output"></p>
-					</div>
-				</div>
-				<div class="output__final" id="OutputFin">
-					<p class="output__text" id="output"></p>
-					<button
-						class="boton__copiar remove"
-						id="btnCopy"
-						onclick="copiar()"
-					>
-						Copiar
-					</button>
-				</div>
-			</div>
-		</main>
-
-		<!-- Footer -->
-
-		<footer>
-			<div class="footer__container">
-				<p id="footer-by"></p>
-				<div class="icons-footer" id="footer-icons">
+		<div class="site-content">
+			<main>
+				<div
+					class="Logo__container"
+					style="display: flex; justify-content: center"
+				>
 					<a
-						href="https://www.linkedin.com/in/leonicvar/"
+						href="https://www.linkedin.com/company/alura-latam/"
 						target="_blank"
-						><i class="bx bxl-linkedin-square"></i
-					></a>
-					<a href="https://github.com/LeandroNV" target="_blank"
-						><i class="bx bxl-github"></i
-					></a>
+						><img
+							class="logo"
+							src="/img/logo-dark-fill.png"
+							alt="logo"
+							id="logo"
+					/></a>
 				</div>
-			</div>
-		</footer>
+
+				<div class="input__container">
+					<!-- Título -->
+					<div class="title__container">
+						<h1 class="title" id="title">
+							<span class="title-color-effect" id="title-color"
+								>0X9B2C1F5</span
+							>
+							<span class="typing" id="typing"></span>
+						</h1>
+						<!-- <h1 class="typing" id="typing"></h1> -->
+					</div>
+
+					<!-- Caja texto -->
+					<div class="textarea__container">
+						<textarea
+							name="input"
+							id="input"
+							placeholder="Escribe tu mensaje aquí..."
+							oninput="limitarTexto()"
+						></textarea>
+					</div>
+
+					<div class="seccion__botones" id="botones">
+						<!-- Texto alerta -->
+						<div class="texto__info">
+							<i class="bx bxs-alarm-exclamation"></i>
+							<p>Sólo letras minúsculas y sin acentos.</p>
+						</div>
+						<!-- Botones -->
+						<div class="botones__container">
+							<button
+								class="boton__encriptar"
+								onclick="encriptar()"
+							>
+								Encriptar
+							</button>
+							<button
+								class="boton__desencriptar"
+								onclick="desencriptar()"
+							>
+								Desencriptar
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- Texto Salida -->
+				<div class="output__container">
+					<div class="output__inicial" id="outputIni">
+						<!-- Avatar Img -->
+						<img
+							class="figure"
+							src="/img/neon-04-rb.png"
+							alt="avatar"
+						/>
+						<!-- Texto Container -->
+						<div class="texto__output">
+							<p class="texto__output-titulo" id="titulo-output">
+								xxxxx xxxxx xxx xxxx
+							</p>
+							<p
+								class="texo__output-parrafo"
+								id="parrafo-output"
+							></p>
+						</div>
+					</div>
+					<div class="output__final" id="OutputFin">
+						<p class="output__text" id="output"></p>
+						<button
+							class="boton__copiar remove"
+							id="btnCopy"
+							onclick="copiar()"
+						>
+							Copiar
+						</button>
+					</div>
+				</div>
+			</main>
+
+			<!-- Footer -->
+
+			<footer>
+				<div class="footer__container">
+					<p id="footer-by"></p>
+					<div class="icons-footer" id="footer-icons">
+						<a
+							href="https://www.linkedin.com/in/leonicvar/"
+							target="_blank"
+							><i class="bx bxl-linkedin-square"></i
+						></a>
+						<a href="https://github.com/LeandroNV" target="_blank"
+							><i class="bx bxl-github"></i
+						></a>
+					</div>
+				</div>
+			</footer>
+		</div>
 
 		<!-- Sweetalert -->
 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.4/dist/sweetalert2.all.min.js"></script>
+
 		<!-- GSAP -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+		<!-- Anime -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
 		<!-- JS -->
 		<script src="/js/app.js"></script>
 	</body>
