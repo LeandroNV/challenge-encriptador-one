@@ -97,13 +97,13 @@ gsap.to(".loader-2", {
 
 /*============= ANIMACIONES GSAP ===============*/
 
-gsap.from(".site-content", {
-	y: 200,
-	ease: "power4.inOut",
-	duration: 1.5,
-	delay: 4.2,
-	stagger: 0.05,
-});
+// gsap.from(".site-content", {
+// 	y: 200,
+// 	ease: "power4.inOut",
+// 	duration: 1.5,
+// 	delay: 4.2,
+// 	stagger: 0.05,
+// });
 
 gsap.to(tituloOut, {
 	duration: 1.5,
@@ -133,21 +133,21 @@ gsap.to(footerBy, {
 	delay: 4.5,
 });
 
-// gsap.from("#footer-icons", {
-// 	duration: 1.5,
-// 	opacity: 0,
-// 	x: 50,
-// 	ease: "back.out",
-// 	delay: 4.5,
-// });
+gsap.from("#footer-icons", {
+	duration: 1.5,
+	opacity: 0,
+	x: 50,
+	ease: "back.out",
+	delay: 4.5,
+});
 
-// gsap.to("#logo", {
-// 	clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-// 	ease: "power4.inOut",
-// 	duration: 1.5,
-// 	delay: 4.4,
-// 	stagger: 0.25,
-// });
+gsap.to("#logo", {
+	clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+	ease: "power4.inOut",
+	duration: 1.5,
+	delay: 4.4,
+	stagger: 0.25,
+});
 
 function animar(id = String, ease = String) {
 	gsap.from(id, {
