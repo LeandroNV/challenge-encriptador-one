@@ -19,14 +19,14 @@ let isPaused = false;
 let pauseEnd = 0;
 
 /* ============ ANIMACIÓN LOADER =============== */
-function removeLoaderAfterDelay(delayTime) {
-	setTimeout(() => {
-		const loaderElement = document.querySelector(".loader-container");
-		if (loaderElement) {
-			loaderElement.remove(); // Elimina el loader del DOM
-		}
-	}, delayTime);
-}
+// function removeLoaderAfterDelay(delayTime) {
+// 	setTimeout(() => {
+// 		const loaderElement = document.querySelector(".loader-container");
+// 		if (loaderElement) {
+// 			loaderElement.remove(); // Elimina el loader del DOM
+// 		}
+// 	}, delayTime);
+// }
 
 function startLoader() {
 	let counterElement = document.querySelector(".count p");
@@ -49,7 +49,7 @@ function startLoader() {
 startLoader(); // Iniciar el loader
 
 // Llamar a la función removeLoaderAfterDelay() para eliminar el loader después de un tiempo específico
-removeLoaderAfterDelay(6000);
+// removeLoaderAfterDelay(7000);
 
 gsap.to(".count", { opacity: 0, delay: 3.5, duration: 0.25 });
 
@@ -112,7 +112,7 @@ gsap.to(".loader-2", {
 	clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
 	ease: "power4.inOut",
 	duration: 1.5,
-	delay: 3.5,
+	delay: 4.2,
 });
 
 /*============= ANIMACIONES GSAP ===============*/
@@ -121,7 +121,7 @@ gsap.from(".site-content", {
 	y: 200,
 	ease: "power4.inOut",
 	duration: 1.5,
-	delay: 3.5,
+	delay: 4.2,
 	stagger: 0.05,
 });
 
@@ -165,17 +165,17 @@ gsap.to("#logo", {
 	clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
 	ease: "power4.inOut",
 	duration: 1.5,
-	delay: 4,
+	delay: 4.4,
 	stagger: 0.25,
 });
 
-gsap.to(".figure", {
-	clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-	ease: "power4.inOut",
-	duration: 1.5,
-	delay: 4.5,
-	stagger: 0.25,
-});
+// gsap.to(".figure", {
+// 	clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+// 	ease: "power4.inOut",
+// 	duration: 1.5,
+// 	delay: 4.5,
+// 	stagger: 0.25,
+// });
 
 function animar(id = String, ease = String) {
 	gsap.from(id, {
@@ -347,45 +347,3 @@ function copiar() {
 	funcionAlerta("success", "Texto copiado al portapapeles");
 	animar("#outputIni", "back.out");
 }
-
-function typeWriterEffect() {
-	const greetingElement = document.getElementById("typing");
-
-	if (isPaused && Date.now() > pauseEnd) {
-		isPaused = false;
-		if (isDeleting) {
-			currentGreetingIndex = (currentGreetingIndex + 1) % greeting.length;
-			isDeleting = false;
-		} else {
-			isDeleting = true;
-		}
-	}
-
-	if (
-		!isPaused &&
-		!isDeleting &&
-		currentCharacterIndex === greeting[currentGreetingIndex].length
-	) {
-		isPaused = true;
-		pauseEnd = Date.now() + 800;
-		return setTimeout(typeWriterEffect, 50);
-	}
-
-	if (!isPaused && isDeleting && currentCharacterIndex === 0) {
-		isPaused = true;
-		pauseEnd = Date.now() + 200;
-		return setTimeout(typeWriterEffect, 50);
-	}
-
-	const timeout = isDeleting ? 100 : 200;
-	greetingElement.innerText = greeting[currentGreetingIndex].substring(
-		0,
-		currentCharacterIndex
-	);
-	currentCharacterIndex = isDeleting
-		? currentCharacterIndex - 1
-		: currentCharacterIndex + 1;
-	setTimeout(typeWriterEffect, timeout);
-}
-
-typeWriterEffect();
