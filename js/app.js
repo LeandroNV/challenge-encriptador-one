@@ -81,7 +81,7 @@ gsap.to(".loader-bg", {
 	height: "0",
 	ease: "power4.inOut",
 	duration: 1.5,
-	delay: 4,
+	delay: 4.2,
 	onComplete: function () {
 		// Cambiar el z-index de .site-content para que esté por encima del loader
 		document.querySelector(".site-content").style.zIndex = "1";
@@ -92,25 +92,25 @@ gsap.to(".loader-2", {
 	clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
 	ease: "power4.inOut",
 	duration: 1.5,
-	delay: 4.2,
+	delay: 4.5,
 });
 
 /*============= ANIMACIONES GSAP ===============*/
 
-// gsap.from(".site-content", {
-// 	y: 200,
-// 	ease: "power4.inOut",
-// 	duration: 1.5,
-// 	delay: 4.2,
-// 	stagger: 0.05,
-// });
-
-gsap.to(tituloOut, {
+gsap.from(".site-content", {
+	y: 200,
+	ease: "power4.inOut",
 	duration: 1.5,
-	text: "Ningún mensaje fue encontrado.",
-	ease: "none",
 	delay: 4.5,
+	stagger: 0.05,
 });
+
+// gsap.to(tituloOut, {
+// 	duration: 1.5,
+// 	text: "Ningún mensaje fue encontrado.",
+// 	ease: "none",
+// 	delay: 4.5,
+// });
 
 // gsap.to(titleColor, {
 // 	duration: 1.5,
@@ -119,12 +119,12 @@ gsap.to(tituloOut, {
 // 	delay: 4.5,
 // });
 
-gsap.to(parrafoOut, {
-	duration: 1.5,
-	text: "Por favor, ingrese un mensaje para encriptar.",
-	ease: "none",
-	delay: 4.5,
-});
+// gsap.to(parrafoOut, {
+// 	duration: 1.5,
+// 	text: "Por favor, ingrese un mensaje para encriptar.",
+// 	ease: "none",
+// 	delay: 4.5,
+// });
 
 gsap.to(footerBy, {
 	duration: 1.5,
@@ -133,21 +133,21 @@ gsap.to(footerBy, {
 	delay: 4.5,
 });
 
-gsap.from("#footer-icons", {
-	duration: 1.5,
-	opacity: 0,
-	x: 50,
-	ease: "back.out",
-	delay: 4.5,
-});
+// gsap.from("#footer-icons", {
+// 	duration: 1.5,
+// 	opacity: 0,
+// 	x: 50,
+// 	ease: "back.out",
+// 	delay: 4.5,
+// });
 
-gsap.to("#logo", {
-	clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-	ease: "power4.inOut",
-	duration: 1.5,
-	delay: 4.4,
-	stagger: 0.25,
-});
+// gsap.to("#logo", {
+// 	clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+// 	ease: "power4.inOut",
+// 	duration: 1.5,
+// 	delay: 4.4,
+// 	stagger: 0.25,
+// });
 
 function animar(id = String, ease = String) {
 	gsap.from(id, {
