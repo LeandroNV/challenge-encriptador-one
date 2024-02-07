@@ -74,7 +74,9 @@ body {
 	height: 100vh;
 	width: 100vw;
 	user-select: none;
-	background: radial-gradient(58.06% 58.06% at 50% 50%, #0e261b 0, #000 100%);
+	/* background: radial-gradient(58.06% 58.06% at 50% 50%, #0e261b 0, #000 100%); */
+	background-color: #010a00;
+	background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
 }
 
 .site-content {
@@ -175,12 +177,9 @@ main {
 	top: 0;
 	width: 100%;
 	height: 100%;
-	background: url(../img/bg-loader03.jpg) no-repeat 50% 50%;
+	background: url(../img/bg-loader03.png) no-repeat 50% 50%;
 	background-size: cover;
 	background-position: top;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	z-index: -1;
 	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
@@ -234,7 +233,7 @@ main {
 
 .title {
 	font-size: var(--h1);
-	font-weight: 800;
+	/* font-weight: 800; */
 	letter-spacing: 0.4;
 	max-width: 100%;
 	text-align: center;
@@ -243,14 +242,24 @@ main {
 }
 
 .title-color-effect {
-	background: linear-gradient(120deg, #79eee5, #2941e4);
+	color: #fff;
+	text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff,
+		0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
+	/* background: linear-gradient(120deg, #79eee5, #2941e4);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	font-weight: 900;
+	font-weight: 900; */
 	/* text-shadow: 0 0 10px #0ebeff, 0 0 20px #0ebeff, 0 0 50px #0ebeff,
 		0 0 100px #0ebeff, 0 0 200px #0ebeff; */
 	font-style: italic;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	font-weight: 400;
+	justify-content: center;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	/* font-family: "Syncopate", sans-serif; */
 	letter-spacing: 0.4;
 }
@@ -297,14 +306,24 @@ textarea {
 textarea::placeholder {
 	color: #d2f9f4;
 	font-weight: 300;
+	font-style: italic;
 }
 
 textarea:focus {
 	min-height: 28rem;
 	/* box-shadow: inset 18px 18px 30px #d1d9e9, inset -18px -18px 30px #ffffff; */
-	box-shadow: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.075),
+	/* box-shadow: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.075),
 		0 0 0 1px hsla(0, 0%, 0%, 0.05), 0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
-		0 0.9px 1.5px hsla(0, 0%, 0%, 0.045), 0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+		0 0.9px 1.5px hsla(0, 0%, 0%, 0.045), 0 3.5px 6px hsla(0, 0%, 0%, 0.09); */
+
+	background: hsl(175, 77%, 70%, 5%);
+	/* box-shadow: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.075),
+		0 0 0 1px hsla(0, 0%, 0%, 0.05), 0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+		0 0.9px 1.5px hsla(0, 0%, 0%, 0.045), 0 3.5px 6px hsla(0, 0%, 0%, 0.09); */
+	border-radius: 20px;
+	-webkit-box-shadow: 0px 0px 126px 0px rgba(45, 255, 196, 0.3);
+	-moz-box-shadow: 0px 0px 126px 0px rgba(45, 255, 196, 0.3);
+	box-shadow: 0px 0px 126px 0px rgba(45, 255, 196, 0.3);
 }
 
 textarea:placeholder-shown {
@@ -637,6 +656,9 @@ footer {
 	.figure {
 		position: relative;
 		top: -3.7rem;
+	}
+	.footer__container {
+		margin-top: 2rem;
 	}
 }
 
