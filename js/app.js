@@ -83,7 +83,7 @@ gsap.to(".loader-bg", {
 	duration: 1.5,
 	delay: 4.2,
 	onComplete: function () {
-		// Cambiar el z-index de .site-content para que esté por encima del loader
+		// Cambiar el z-index de .site-content para que esté encima del loader
 		document.querySelector(".site-content").style.zIndex = "1";
 	},
 });
@@ -97,13 +97,12 @@ gsap.to(".loader-2", {
 
 /*============= ANIMACIONES GSAP ===============*/
 
-// gsap.from(".site-content", {
-// 	y: 200,
-// 	ease: "power4.inOut",
-// 	duration: 1.5,
-// 	delay: 4.5,
-// 	stagger: 0.05,
-// });
+gsap.from(".site-content", {
+	duration: 1.5,
+	xPercent: 200,
+	ease: "power4.inOut",
+	delay: 4.5,
+});
 
 // gsap.to(tituloOut, {
 // 	duration: 1.5,
@@ -205,7 +204,7 @@ function funcionAlerta(icon, title) {
 		showConfirmButton: false,
 		timer: 2000,
 		timerProgressBar: true,
-		background: "#0e261b",
+		background: "#000212",
 		color: "#fff",
 		didOpen: (toast) => {
 			toast.onmouseenter = Swal.stopTimer;
