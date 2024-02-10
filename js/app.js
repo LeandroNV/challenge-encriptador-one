@@ -99,7 +99,7 @@ gsap.to(".loader-2", {
 gsap.fromTo(
 	".site-content",
 	{ opacity: 0 },
-	{ opacity: 1, duration: 2, delay: 5 }
+	{ opacity: 1, duration: 2, delay: 5.3 }
 );
 
 gsap.to(footerBy, {
