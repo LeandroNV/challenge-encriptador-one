@@ -97,12 +97,12 @@ gsap.to(".loader-2", {
 
 /*============= ANIMACIONES GSAP ===============*/
 
-gsap.from(".site-content", {
-	duration: 1.5,
-	xPercent: 200,
-	ease: "power4.inOut",
-	delay: 4.5,
-});
+// gsap.from(".site-content", {
+// 	duration: 1.5,
+// 	xPercent: 200,
+// 	ease: "power4.inOut",
+// 	delay: 4.5,
+// });
 
 // gsap.to(tituloOut, {
 // 	duration: 1.5,
