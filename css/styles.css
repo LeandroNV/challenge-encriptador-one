@@ -200,7 +200,7 @@ main {
 	bottom: 0;
 	width: 100vw;
 	height: 100vh;
-	background: url(../img/bg-loader03.png) no-repeat 50% 50%;
+	background: url(../img/bg-loader03.jpg) no-repeat 50% 50%;
 	background-size: cover;
 	z-index: -1;
 	display: flex;
