@@ -106,7 +106,7 @@ gsap.to(footerBy, {
 	duration: 1.5,
 	text: "© Code by Leandro Vargas",
 	ease: "none",
-	delay: 4.5,
+	delay: 5.3,
 });
 
 function animar(id = String, ease = String) {
