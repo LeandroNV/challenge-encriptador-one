@@ -268,7 +268,7 @@ main {
 }
 
 .title-color-effect {
-	background: linear-gradient(to bottom, #fcfcfc 0%, #97979e 100%);
+	background: linear-gradient(to bottom, #fcfcfc 0%, rgb(0, 183, 255) 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	font-weight: 900;
