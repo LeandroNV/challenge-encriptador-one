@@ -532,7 +532,7 @@ button:active {
 footer {
 	height: auto;
 	display: flex;
-	align-items: end;
+	align-items: flex-end;
 	justify-content: center;
 }
 
@@ -575,6 +575,31 @@ footer {
 /*===============================================================*/
 
 /*======================= MEDIA QUERIES  ======================*/
+
+@media screen and (max-height: 768px) {
+	.site-content {
+		height: auto;
+	}
+	main {
+		grid-template-columns: 1fr;
+		height: 80%;
+	}
+	.seccion__botones {
+		margin-top: 2rem;
+	}
+	#input {
+		margin-top: 2rem;
+	}
+
+	.output__container {
+		margin-top: 4rem;
+		height: 840px;
+	}
+
+	footer {
+		margin-top: 2rem;
+	}
+}
 
 @media screen and (max-width: 1200px) {
 	main {
