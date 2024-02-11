@@ -50,17 +50,6 @@ Puedes encontrar una demostración en vivo de la aplicación [aquí](https://cha
 
 No se requiere instalación. Simplemente abre el archivo HTML en tu navegador web para usar la aplicación.
 
-## Contribuir
-
-Si deseas contribuir a este proyecto, por favor sigue estas instrucciones:
-
-1. Haz un fork del repositorio.
-2. Clona tu fork: `git clone https://github.com/tu_usuario/encriptador.git`
-3. Crea una rama para tu nueva funcionalidad: `git checkout -b nueva-funcionalidad`
-4. Haz tus cambios y haz commit: `git commit -am 'Agregar nueva funcionalidad'`
-5. Empuja la rama a tu repositorio remoto: `git push origin nueva-funcionalidad`
-6. Haz un pull request en el repositorio original.
-
 ---
 
 ¡Gracias a los profesores [Christian Velasco](https://www.linkedin.com/in/christianpva/) y [Leonardo Castillo](https://www.linkedin.com/in/leonardo-castillo-4911571a/) por su excelente explicación a lo largo de todos los cursos!
