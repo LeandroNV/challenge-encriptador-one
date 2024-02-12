@@ -271,6 +271,8 @@ function desencriptar() {
 
 	//Agregar clase para mostrar el texto desencriptado
 	addClass("outputIni", "remove");
+	// Remover clase para mostrar el botón de copiar
+	removeClass("btnCopy", "remove");
 	// Mostrar el texto encriptado
 	animarTextoEncriptado(resultadoDesencriptado);
 	// Cambiar el color del botón de copiar
