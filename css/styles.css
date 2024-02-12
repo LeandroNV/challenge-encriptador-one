@@ -536,8 +536,11 @@ button:active {
 	font-size: 20px;
 	font-weight: 600;
 	text-wrap: pretty;
-	font-weight: 400;
+	font-weight: 300;
 	z-index: 1;
+	background-color: #000212;
+	height: 90%;
+	border: none;
 }
 
 .output__final {
