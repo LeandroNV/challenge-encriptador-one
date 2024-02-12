@@ -198,7 +198,7 @@ function asignarTextoElemento(elemento, texto) {
 }
 
 function scrollToBottom() {
-	// window.scrollTo(0, document.body.scrollHeight);
+	// window.scrollTo(0, document.body.scrollHeight, "smooth");
 	window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
 }
 
@@ -215,8 +215,7 @@ function encriptar() {
 		funcionAlerta("error", "Por favor, ingrese un mensaje para encriptar.");
 		return;
 	}
-	// Lleva al usuario al final de la página
-	scrollToBottom();
+
 	// Reemplazar letras según las reglas
 	const resultadoEncriptado = output
 		.replace(/e/g, "enter")
@@ -245,6 +244,8 @@ function encriptar() {
 	removeClass("OutputFin", "remove");
 	// Habilitar el botón de copiar
 	btnCopy.removeAttribute("disabled");
+	// Lleva al usuario al final de la página después de un pequeño retraso
+	setTimeout(scrollToBottom, 100);
 }
 
 function desencriptar() {
@@ -259,8 +260,6 @@ function desencriptar() {
 		);
 		return;
 	}
-	// Lleva al usuario al final de la página
-	scrollToBottom();
 	// Reemplazar letras según las reglas
 	const resultadoDesencriptado = output
 		.replace(/ufat/g, "u")
@@ -285,6 +284,8 @@ function desencriptar() {
 	removeClass("OutputFin", "remove");
 	// Habilitar el botón de copiar
 	btnCopy.removeAttribute("disabled");
+	// Lleva al usuario al final de la página después de un pequeño retraso
+	setTimeout(scrollToBottom, 100);
 }
 
 function copiar() {
