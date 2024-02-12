@@ -540,8 +540,10 @@ button:active {
 	z-index: 1;
 	background-color: #000212;
 	min-height: 90%;
+	width: 100%;
 	border: none;
 	box-shadow: none;
+	padding: 0;
 }
 
 .output__final {
@@ -550,6 +552,7 @@ button:active {
 	justify-content: space-between;
 	align-items: center;
 	height: 100%;
+	width: 100%;
 }
 
 .remove {
@@ -816,6 +819,7 @@ footer {
 		min-height: 70%;
 		min-width: 300px;
 		box-shadow: none;
+		padding: 0 0.5rem;
 	}
 
 	.boton__copiar {
