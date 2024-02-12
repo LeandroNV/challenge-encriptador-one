@@ -590,7 +590,7 @@ footer {
 		width: fit-content;
 	}
 	.seccion__botones {
-		margin-top: 2rem;
+		margin-top: 3rem;
 	}
 	#input {
 		margin-top: 2rem;
@@ -602,7 +602,11 @@ footer {
 	}
 
 	.output__inicial {
-		padding: 4rem;
+		padding: 0 5rem;
+	}
+
+	.texto__output {
+		margin: 2rem 0;
 	}
 
 	footer {
