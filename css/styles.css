@@ -1,6 +1,14 @@
 /* Importamos las fuentes */
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@font-face {
+	font-family: "Anurati";
+	src: url(/fonts/Anurati-Regular.otf);
+}
+
+@font-face {
+	font-family: "Elianto";
+	src: url(/fonts/Elianto-Regular.otf);
+}
 
 /*======================= Variables  ======================*/
 
@@ -90,7 +98,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	font-family: "Inter", sans-serif;
+	font-family: "Elianto", sans-serif;
 	font-size: 16px;
 	line-height: 1.5;
 	color: var(--text-color);
@@ -162,11 +170,12 @@ main {
 	text-align: right;
 	line-height: 1;
 	padding: 0 1em;
+	font-family: "Elianto", "sans-serif";
 }
 
 .copy {
 	flex: 6;
-	font-family: "PP Editorial Old";
+	font-family: "Anurati", sans-serif;
 	font-size: 30px;
 	text-transform: uppercase;
 	line-height: 1;
@@ -231,23 +240,6 @@ main {
 	justify-content: space-between;
 }
 
-/* Animar el título */
-
-.typing {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: auto;
-	font-style: italic;
-	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: var(--text-color);
-	color: transparent;
-	/* background: linear-gradient(to bottom, #fcfcfc 0%, #97979e 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent; */
-	font-weight: 900;
-}
-
 /* ---------------- */
 
 .title__container {
@@ -274,9 +266,26 @@ main {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	font-weight: 900;
-	font-style: normal;
-	font-family: "Inter", sans-serif;
+	font-family: "Elianto", "Inter", sans-serif;
 	letter-spacing: 0.4;
+}
+
+/* Animar el título */
+
+.typing {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: auto;
+	font-style: italic;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: var(--text-color);
+	color: transparent;
+	font-family: "Anurati", sans-serif;
+	/* background: linear-gradient(to bottom, #fcfcfc 0%, #97979e 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent; */
+	font-weight: 900;
 }
 
 .textarea__container {
@@ -307,6 +316,7 @@ textarea {
 	cursor: pointer;
 	resize: none;
 	color: var(--text-color);
+	font-family: "Elianto", sans-serif;
 	/* margin-top: 5rem; */
 }
 
@@ -314,6 +324,8 @@ textarea::placeholder {
 	color: #d2f9f4;
 	font-weight: 300;
 	font-style: italic;
+	font-family: "Elianto", sans-serif;
+	font-size: 20px;
 }
 
 textarea:focus {
@@ -340,6 +352,7 @@ textarea:placeholder-shown {
 
 .texto__info p {
 	font-size: 15px;
+	font-family: "Elianto", sans-serif;
 }
 
 .texto__info i {
@@ -366,13 +379,14 @@ button:active {
 	background-color: #5e6ad2;
 	color: var(--text-color);
 	font-weight: 600;
+	font-family: "Elianto", sans-serif;
+	text-transform: uppercase;
 	cursor: pointer;
 	transition: all ease 0.2s;
 	text-align: center;
 }
 
 .boton__encriptar:hover {
-	/* transform: translate(0, -3px); */
 	box-shadow: 0 20px 80px -10px #5e6ad2;
 }
 
@@ -386,6 +400,8 @@ button:active {
 	border: 1px solid var(--text-color);
 	color: var(--text-color);
 	font-weight: 600;
+	font-family: "Elianto", "sans-serif";
+	text-transform: uppercase;
 	cursor: pointer;
 	transition: all ease 0.2s;
 	text-align: center;
@@ -408,6 +424,7 @@ button:active {
 	cursor: pointer;
 	transition: all ease 0.2s;
 	border: 1px solid var(--color-bg-primary);
+	text-transform: uppercase;
 }
 
 /*==========================================================================*/
@@ -500,16 +517,19 @@ button:active {
 .texto__output-titulo {
 	font-weight: bold;
 	color: var(--text-color);
-	font-size: 2rem;
+	font-size: var(--h5);
 	text-wrap: pretty;
 	line-height: 1.1;
+	font-family: "Elianto", sans-serif;
+	text-transform: uppercase;
 }
 
 .texo__output-parrafo {
 	font-weight: 500;
-	font-size: 15px;
+	font-size: var(--p);
 	color: var(--text-color);
 	text-wrap: pretty;
+	font-family: "Elianto", sans-serif;
 }
 
 .output__text {
@@ -549,9 +569,11 @@ footer {
 }
 
 .footer__container p {
-	font-size: 15px;
+	font-size: 12px;
 	font-weight: 600;
 	color: var(--text-color);
+	font-family: "Anurati", sans-serif;
+	text-transform: uppercase;
 }
 
 .footer__container a {
