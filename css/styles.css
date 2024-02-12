@@ -587,7 +587,7 @@ footer {
 	}
 	main {
 		grid-template-columns: 1fr;
-		height: 80%;
+		width: fit-content;
 	}
 	.seccion__botones {
 		margin-top: 2rem;
@@ -599,6 +599,10 @@ footer {
 	.output__container {
 		margin-top: 4rem;
 		height: 840px;
+	}
+
+	.output__inicial {
+		padding: 4rem;
 	}
 
 	footer {
