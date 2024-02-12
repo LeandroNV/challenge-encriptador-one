@@ -736,6 +736,9 @@ footer {
 	.loader-2 {
 		background-position: center;
 	}
+	.copy {
+		font-size: 27px;
+	}
 	.site-content {
 		padding: 0.8rem 0;
 	}
