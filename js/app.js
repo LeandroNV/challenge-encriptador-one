@@ -158,7 +158,22 @@ function limitarTexto() {
 	// Permitir solo letras y espacios
 	const textoFiltrado = contenido.replace(/[^a-z ]/g, "");
 
-	// Actualizar el contenido del textarea
+	// Validar la longitud del texto
+	if (textoFiltrado.length > 1000) {
+		funcionAlertaTexto();
+
+		// Encontrar el último espacio en blanco antes del límite de caracteres
+		const ultimoEspacio = textoFiltrado.lastIndexOf(" ", 1000);
+		// Recortar el texto hasta el último espacio en blanco encontrado
+		const textoRecortado = textoFiltrado.substring(0, ultimoEspacio);
+		// Actualizar el contenido del textarea con el texto recortado
+		textarea.value = textoRecortado;
+
+		// Finalizar la función sin realizar más acciones
+		return;
+	}
+
+	// Actualizar el contenido del textarea con el texto filtrado
 	textarea.value = textoFiltrado;
 }
 
@@ -179,6 +194,16 @@ function funcionAlerta(icon, title) {
 	Toast.fire({
 		icon: icon,
 		title: title,
+	});
+}
+
+function funcionAlertaTexto() {
+	Swal.fire({
+		icon: "error",
+		title: "Oops...",
+		text: "El texto no debe superar los 1000 caracteres.",
+		background: "#000212",
+		color: "#fff",
 	});
 }
 
