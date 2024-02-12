@@ -359,7 +359,8 @@ button:active {
 
 .boton__encriptar {
 	display: block;
-	padding: 1rem 6rem;
+	width: 250px;
+	padding: 1rem 0;
 	border-radius: 10px;
 	border: none;
 	background-color: #5e6ad2;
@@ -367,7 +368,7 @@ button:active {
 	font-weight: 600;
 	cursor: pointer;
 	transition: all ease 0.2s;
-	text-wrap: pretty;
+	text-align: center;
 }
 
 .boton__encriptar:hover {
@@ -377,7 +378,8 @@ button:active {
 
 .boton__desencriptar {
 	display: block;
-	padding: 1rem 6rem;
+	width: 250px;
+	padding: 1rem 0;
 	border-radius: 10px;
 	border: none;
 	background-color: var(--color-bg-primary);
@@ -386,6 +388,7 @@ button:active {
 	font-weight: 600;
 	cursor: pointer;
 	transition: all ease 0.2s;
+	text-align: center;
 }
 
 .boton__desencriptar:hover {
@@ -396,7 +399,8 @@ button:active {
 
 .boton__copiar {
 	display: block;
-	padding: 1rem 6rem;
+	padding: 1rem 0;
+	width: 200px;
 	border-radius: 10px;
 	background-color: var(--text-color);
 	color: var(--color-bg-primary);
@@ -519,8 +523,9 @@ button:active {
 .output__final {
 	display: flex;
 	flex-direction: column;
-	height: 100%;
 	justify-content: space-between;
+	align-items: center;
+	height: 100%;
 }
 
 .remove {
@@ -601,13 +606,6 @@ footer {
 	}
 }
 
-@media screen and (max-width: 1200px) {
-	main {
-		/* grid-template-columns: 10% 50% 40%; */
-		height: 80%;
-	}
-}
-
 @media screen and (max-width: 1024px) {
 	.site-content {
 		height: auto;
@@ -615,7 +613,7 @@ footer {
 
 	main {
 		grid-template-columns: 1fr;
-		height: 80%;
+		width: 70%;
 	}
 	.seccion__botones {
 		margin-top: 2rem;
@@ -628,18 +626,21 @@ footer {
 		margin-top: 4rem;
 		height: 840px;
 	}
+
+	footer {
+		margin-top: 2rem;
+	}
 }
 
 @media screen and (max-width: 768px) {
 	.site-content {
 		height: auto;
-		padding: 0;
+		padding: 0.8rem 0.5rem;
 	}
 	main {
 		grid-template-columns: 1fr;
-		height: 80%;
+		width: 80%;
 		gap: 0;
-		padding: 1.5rem 1rem;
 	}
 
 	.loader-2 {
@@ -654,17 +655,21 @@ footer {
 		height: 640px;
 	}
 
+	.output__inicial {
+		padding: 2rem;
+	}
+
 	.input__container {
 		margin-top: 2rem;
 	}
 	.boton__encriptar {
-		padding: 1rem 3rem;
+		width: 200px;
 	}
 	.boton__desencriptar {
-		padding: 1rem 3rem;
+		width: 200px;
 	}
 	.boton__copiar {
-		padding: 1rem 3rem;
+		width: 200px;
 	}
 
 	footer {
@@ -679,15 +684,35 @@ footer {
 	}
 }
 
+@media screen and (max-width: 485px) {
+	main {
+		width: 95%;
+	}
+	.boton__encriptar {
+		width: 180px;
+	}
+	.boton__desencriptar {
+		width: 180px;
+	}
+	.boton__copiar {
+		width: 180px;
+	}
+	.output__inicial {
+		padding: 0;
+	}
+}
+
 @media screen and (max-width: 430px) {
 	.loader-2 {
 		background-position: center;
 	}
 	.site-content {
-		padding: 0.8rem 0.5rem;
+		padding: 0.8rem 0;
 	}
 	main {
+		padding: 0;
 		gap: 0.5rem;
+		width: 90%;
 	}
 	.input__container {
 		margin-top: 0;
@@ -719,16 +744,13 @@ footer {
 		margin-top: 1rem;
 	}
 	.boton__encriptar {
-		padding: 1rem 2rem;
-		font-size: 14px;
+		width: 150px;
 	}
 	.boton__desencriptar {
-		padding: 1rem 2rem;
-		font-size: 14px;
+		width: 150px;
 	}
 	.boton__copiar {
-		padding: 1rem 2rem;
-		font-size: 14px;
+		width: 150px;
 	}
 	.textarea__container {
 		height: 300px;
