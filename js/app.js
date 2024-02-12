@@ -11,6 +11,10 @@ const parrafoOut = document.getElementById("parrafo-output");
 const footerBy = document.getElementById("footer-by");
 const titleColor = document.getElementById("title-color");
 
+// document.addEventListener("contextmenu", function (event) {
+// 	event.preventDefault(); // Prevenir el comportamiento predeterminado del evento
+// });
+
 function startLoader() {
 	let counterElement = document.querySelector(".count p");
 	let currentValue = 0;
@@ -193,6 +197,15 @@ function asignarTextoElemento(elemento, texto) {
 	elementoHTML.innerHTML = texto;
 }
 
+function scrollToBottom() {
+	// window.scrollTo(0, document.body.scrollHeight);
+	window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+}
+
+function scrollToTop() {
+	window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
 function encriptar() {
 	const input = document.getElementById("input");
 	const output = input.value;
@@ -231,6 +244,8 @@ function encriptar() {
 	removeClass("OutputFin", "remove");
 	// Habilitar el botón de copiar
 	btnCopy.removeAttribute("disabled");
+	// Lleva al usuario al final de la página
+	scrollToBottom();
 }
 
 function desencriptar() {
@@ -268,6 +283,8 @@ function desencriptar() {
 	removeClass("OutputFin", "remove");
 	// Habilitar el botón de copiar
 	btnCopy.removeAttribute("disabled");
+	// Lleva al usuario al final de la página
+	scrollToBottom();
 }
 
 function copiar() {
@@ -278,4 +295,5 @@ function copiar() {
 	removeClass("outputIni", "remove");
 	funcionAlerta("success", "Texto copiado al portapapeles");
 	animar("#outputIni", "back.out");
+	window.scrollTo({ top: 0, behavior: "smooth" });
 }
