@@ -215,7 +215,8 @@ function encriptar() {
 		funcionAlerta("error", "Por favor, ingrese un mensaje para encriptar.");
 		return;
 	}
-
+	// Lleva al usuario al final de la página
+	scrollToBottom();
 	// Reemplazar letras según las reglas
 	const resultadoEncriptado = output
 		.replace(/e/g, "enter")
@@ -244,8 +245,6 @@ function encriptar() {
 	removeClass("OutputFin", "remove");
 	// Habilitar el botón de copiar
 	btnCopy.removeAttribute("disabled");
-	// Lleva al usuario al final de la página
-	scrollToBottom();
 }
 
 function desencriptar() {
@@ -260,7 +259,8 @@ function desencriptar() {
 		);
 		return;
 	}
-
+	// Lleva al usuario al final de la página
+	scrollToBottom();
 	// Reemplazar letras según las reglas
 	const resultadoDesencriptado = output
 		.replace(/ufat/g, "u")
@@ -283,8 +283,6 @@ function desencriptar() {
 	removeClass("OutputFin", "remove");
 	// Habilitar el botón de copiar
 	btnCopy.removeAttribute("disabled");
-	// Lleva al usuario al final de la página
-	scrollToBottom();
 }
 
 function copiar() {
