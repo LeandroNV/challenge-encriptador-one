@@ -643,6 +643,12 @@ footer {
 	}
 }
 
+@media screen and (max-height: 600px) {
+	.output__container {
+		height: 740px;
+	}
+}
+
 @media screen and (max-width: 1150px) {
 	.site-content {
 		height: 100%;
@@ -669,12 +675,15 @@ footer {
 		height: auto;
 		padding: 0.8rem 0.5rem;
 	}
-	.logo {
-		width: 40px;
+
+	.title__container {
+		margin: 0;
 	}
+
 	.title {
 		font-size: var(--h3);
 		margin: 0;
+		padding: 0;
 	}
 	.textarea__container {
 		height: 320px;
@@ -699,10 +708,10 @@ footer {
 	}
 
 	.seccion__botones {
-		margin-top: 2rem;
+		margin-top: 1rem;
 	}
 	.output__container {
-		margin-top: 2rem;
+		margin-top: 1rem;
 		height: 640px;
 	}
 
@@ -711,7 +720,7 @@ footer {
 	}
 
 	.input__container {
-		margin-top: 2rem;
+		margin-top: 0.5rem;
 	}
 	.boton__encriptar {
 		width: 200px;
@@ -724,7 +733,7 @@ footer {
 	}
 
 	footer {
-		margin-top: 2rem;
+		margin-top: 1rem;
 	}
 
 	.title {
